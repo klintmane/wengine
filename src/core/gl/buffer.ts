@@ -38,7 +38,7 @@ export class Buffer {
    * Binds the buffer to the WebGL context
    * @param normalized Indicates if data should be normalized
    */
-  bind = (normalized: boolean = false): void => {
+  bind = (normalized = false) => {
     gl.bindBuffer(this.type, this.buffer);
 
     for (const a of this.attribInfo) {
@@ -50,7 +50,7 @@ export class Buffer {
   /**
    * Unbinds the buffer from the WebGL context
    */
-  unbind = (): void => {
+  unbind = () => {
     gl.bindBuffer(this.type, undefined);
 
     for (const a of this.attribInfo) {
@@ -62,14 +62,14 @@ export class Buffer {
    * Pushes some data to the buffer
    * @param items The items/data to be pushed to the buffer
    */
-  push = (items: number[]): void => {
+  push = (items: number[]) => {
     this.items = [...this.items, ...items];
   };
 
   /**
    * Uploads the buffer data to the GPU
    */
-  upload = (): void => {
+  upload = () => {
     gl.bindBuffer(this.type, this.buffer);
     gl.bufferData(this.type, typeData(this.itemType, this.items), gl.STATIC_DRAW);
   };
@@ -84,7 +84,7 @@ export class Buffer {
   /**
    * Draws the buffer
    */
-  draw = (): void => {
+  draw = () => {
     switch (this.type) {
       case gl.ARRAY_BUFFER:
         return gl.drawArrays(this.mode, 0, this.items.length / this.itemSize);
@@ -93,12 +93,12 @@ export class Buffer {
     }
   };
 
-  destroy = (): void => {
+  destroy = () => {
     gl.deleteBuffer(this.buffer);
   };
 }
 
-const typeSize = (type: number): number => {
+const typeSize = (type: number) => {
   switch (type) {
     case gl.FLOAT:
     case gl.INT:
@@ -115,7 +115,7 @@ const typeSize = (type: number): number => {
   }
 };
 
-const typeData = (type: number, data: number[]): ArrayBuffer => {
+const typeData = (type: number, data: number[]) => {
   switch (type) {
     case gl.FLOAT:
       return new Float32Array(data);

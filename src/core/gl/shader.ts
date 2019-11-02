@@ -96,7 +96,7 @@ export class Shader {
     return loc;
   };
 
-  use = (): void => {
+  use = () => {
     gl.useProgram(this.program);
   };
 }

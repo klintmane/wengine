@@ -15,3 +15,6 @@ export class GL {
     return canvas;
   }
 }
+
+export * from "./buffer";
+export * from "./shader";
