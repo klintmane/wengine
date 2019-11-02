@@ -1,4 +1,4 @@
-export let ctx: WebGLRenderingContext;
+export let gl: WebGLRenderingContext;
 
 export class GL {
   static init(elId: string): HTMLCanvasElement {
@@ -7,8 +7,8 @@ export class GL {
       throw `Cannot find element: ${elId}`;
     }
 
-    ctx = canvas.getContext("webgl");
-    if (!ctx) {
+    gl = canvas.getContext("webgl");
+    if (!gl) {
       throw `Cannot find webgl context on element: ${elId}`;
     }
 

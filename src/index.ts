@@ -1,6 +1,16 @@
-import { Engine } from "./Engine";
+import { Engine } from "./core";
 
-window.onload = () => {
-  const e = new Engine();
-  e.start("c");
+let engine: Engine;
+
+const load = () => {
+  engine = new Engine();
+  engine.start("c");
+  resize(); // TODO: Remove in the future
 };
+
+const resize = () => {
+  engine.resize(window.innerWidth, window.innerHeight);
+};
+
+window.onload = load;
+window.onresize = resize;
