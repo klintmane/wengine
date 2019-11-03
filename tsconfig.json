@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": ["dom", "es7"],
+    "baseUrl": ".",
+    "paths": {
+      "/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}

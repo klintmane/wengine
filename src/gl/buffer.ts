@@ -1,4 +1,4 @@
-import { gl } from "./index";
+import { gl } from "/gl";
 
 type AttribInfo = { location: number; size: number; offset: number };
 

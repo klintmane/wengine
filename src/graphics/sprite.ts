@@ -1,5 +1,5 @@
-import { Buffer } from "../gl";
-import { Vector3 } from "../math/vector";
+import { Buffer } from "/gl";
+import { Vector3 } from "/math/vector";
 
 export class Sprite {
   private name: string;
@@ -8,7 +8,7 @@ export class Sprite {
 
   private buffer: Buffer;
 
-  position: Vector3 = new Vector3();
+  position = new Vector3();
 
   constructor(name: string, width = 100, height = 100) {
     this.name = name;

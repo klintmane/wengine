@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "main": "index.ts",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel src/demo.html"
   },
   "devDependencies": {
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "src": "^1.1.2"
   }
 }

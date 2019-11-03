@@ -1,6 +1,6 @@
-import { GL, gl, Shader } from "../gl";
-import { Sprite } from "../graphics";
-import { Matrix4 } from "../math";
+import { GL, gl, Shader } from "/gl";
+import { Sprite } from "/graphics";
+import { Matrix4 } from "/math";
 
 export class Engine {
   private canvas: HTMLCanvasElement;

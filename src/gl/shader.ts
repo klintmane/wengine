@@ -1,4 +1,4 @@
-import { gl } from "./index";
+import { gl } from "/gl";
 
 type AttribLocs = { [name: string]: number };
 type UniformLocs = { [name: string]: WebGLUniformLocation };
